@@ -3,6 +3,66 @@
 </p>
 
 # Revanced GPhotos
+Revanced GPhotos 为非 Pixel 设备和非 Root 设备提供无限量的原画质照片备份功能，通过伪造设备指纹为 Pixel XL 实现。
+
+## 安装步骤
+* 下载 [GmsCore](https://github.com/ReVanced/GmsCore/releases) 并登录
+* 从 [下载页面](https://github.com/athuld/revanced-gphotos/releases) 选择所需版本
+* 打开 revanced gphotos 并选择账户，这将同步您的内容，请确保开启备份选项
+
+如需使用原版图标的 ReVanced GPhotos，请访问此仓库 - [Unofficial-Life/revanced-gphotos-build](https://github.com/Unofficial-Life/revanced-gphotos-build)
+
+## 为什么创建此仓库？
+此定制版本主要为个人使用而制作，因为常规的 revanced gphotos 使用较为繁琐。对于修改版应用，每次登录需要手动选择账户，且由于包名不同，系统会同时安装两个同名同图标的应用，容易造成混淆。
+
+* 本仓库提供两种版本：
+  * *rvicon* 版本：带有自定义图标和名称（Photos Revanced），可与官方应用共存并显示在启动器中
+  * *rvicon-no-launcher* 版本：功能与 rvicon 相同，但不会出现在启动器。适合仅需自动后台备份的用户
+
+### 注意
+若与官方应用同时使用，请关闭官方应用的自动备份功能以避免占用存储空间。
+
+## ReVanced 定制品牌补丁
+本仓库的下载文件使用我开发的 [自定义品牌补丁](https://github.com/athuld/revanced-patches/commit/3c561c939d2cce8f89ac26a2a1f240eea9019ce8)（灵感来自 YouTube Revanced 的同类补丁），完整致谢原始补丁作者。
+
+使用 ReVanced CLI 的补丁配置如下：
+```json
+[{
+  "patchName": "GmsCore support",
+  "options": [{
+    "key": "gmsCoreVendorGroupId",
+    "value": "app.revanced"
+  }]
+}, {
+  "patchName": "Custom G-Photos branding",
+  "options": [{
+    "key": "appName",
+    "value": "Photos ReVanced"
+  }, {
+    "key": "iconPath",
+    "value": "ReVanced*Logo"
+  }, {
+    "key": "isLauncherEnabled",
+    "value": "false"
+  }]
+}, {
+  "patchName": "Spoof features",
+  "options": [{
+    "key": "featuresToEnable",
+    "value": ["com.google.android.apps.photos.NEXUS_PRELOAD", "com.google.android.apps.photos.nexus_preload"]
+  }, {
+    "key": "featuresToDisable",
+    "value": ["com.google.android.apps.photos.PIXEL_2017_PRELOAD", ...（完整列表见原版）]
+  }]
+}]
+
+# 以下是原始版本
+
+<p align="center">
+  <img width="200" height="auto" src="https://github.com/athuld/revanced-gphotos/blob/main/google-photos-revanced.png" />
+</p>
+
+# Revanced GPhotos
 Revanced GPhotos provide unlimited photos backup for non-pixel and non-rooted devices with original quality. This is done by spoofing the device fingerprint to Pixel XL.
 
 ## Installation
