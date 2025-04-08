@@ -55,7 +55,7 @@ Revanced GPhotos 为非 Pixel 设备和非 Root 设备提供无限量的原画�
     "value": ["com.google.android.apps.photos.PIXEL_2017_PRELOAD", ...（完整列表见原版）]
   }]
 }]
-
+```
 # 以下是原始版本
 
 <p align="center">
