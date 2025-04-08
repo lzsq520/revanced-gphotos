@@ -7,7 +7,7 @@ Revanced GPhotos 为非 Pixel 设备和非 Root 设备提供无限量的原画�
 
 ## 安装步骤
 * 下载 [GmsCore](https://github.com/ReVanced/GmsCore/releases) 并登录
-* 从 [下载页面](https://github.com/athuld/revanced-gphotos/releases) 选择所需版本
+* 从 [下载页面](https://github.com/lzsq520/revanced-gphotos/releases) 选择所需版本
 * 打开 revanced gphotos 并选择账户，这将同步您的内容，请确保开启备份选项
 
 如需使用原版图标的 ReVanced GPhotos，请访问此仓库 - [Unofficial-Life/revanced-gphotos-build](https://github.com/Unofficial-Life/revanced-gphotos-build)
